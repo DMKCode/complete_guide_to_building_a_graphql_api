@@ -19,10 +19,8 @@ export const Comment = new GraphQLObjectType({
 export const CommentInputType = new GraphQLInputObjectType({
   name: 'CommentInput',
   fields: {
-    title: {
-      name: new GraphQLNonNull(GraphQLString),
-      content: new GraphQLNonNull(GraphQLString),
-      postId: new GraphQLNonNull(GraphQLInt)
-    }
+    name: { type: new GraphQLNonNull(GraphQLString) },
+    content: { type: new GraphQLNonNull(GraphQLString) },
+    postId: { type: new GraphQLNonNull(GraphQLInt) }
   }
 });

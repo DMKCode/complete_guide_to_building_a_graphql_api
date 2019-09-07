@@ -35,10 +35,8 @@ export const Post = new GraphQLObjectType({
 export const PostInputType = new GraphQLInputObjectType({
   name: 'PostInput',
   fields: {
-    title: {
-      type: new GraphQLNonNull(GraphQLString),
-      content: new GraphQLNonNull(GraphQLString),
-      content: new GraphQLNonNull(GraphQLString)
-    }
+    title: { type: new GraphQLNonNull(GraphQLString) },
+    content: { type: new GraphQLNonNull(GraphQLString) },
+    author: { type: new GraphQLNonNull(GraphQLString) }
   }
 });

@@ -1,10 +1,10 @@
-import { GraphQLString, GraphQLNonNull } from 'graphql';
+import { GraphQLString, GraphQLNonNull, GraphQLList } from 'graphql';
 import { Author } from '../types/Author';
 import { fakeDatabase } from '../../FakeDatabase';
 
 export default {
-  posts: {
-    type: new GraphQLList(Post),
+  author: {
+    type: Author,
     description: 'Gets a specific author.',
     args: {
       id: {
